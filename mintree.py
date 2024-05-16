@@ -37,6 +37,8 @@ first_point = or_list[first_idx]
 # Add first 2 points to point list
 point_list.append(first_point[0])
 point_list.append(first_point[1])
+print("Initial point list: ", first_point[0], ", ", first_point[1])
+print("Initial edge: ", or_list[first_idx])
 
 possible_out = []
 or_list.remove(first_point)
@@ -61,7 +63,7 @@ for i in range(0, point_num-2):
     
     #Append new point to point list
     point_list.append(new_point)
-    print(new_point, new_edge, possible_out)
+    print("New point add to tree: ", new_point, "\tNew edge connect: ", new_edge, "\tPossible edge connect next", possible_out)
     length = len(possible_out)
     
     #Remove old edge due to new edge in possible out
